@@ -32,7 +32,8 @@
 					{
 						"activity": "baseballclean",
 						"dependencyConditions": [
-							"Succeeded"
+							"Succeeded",
+							"Failed"
 						]
 					}
 				],
