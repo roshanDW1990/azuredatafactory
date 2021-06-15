@@ -15,12 +15,9 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/roshan.patel@pret.com/Deliverect",
+					"notebookPath": "/Users/roshan.patel@pret.com/widget adf",
 					"baseParameters": {
-						"begindate": {
-							"value": "@pipeline().parameters.begindate",
-							"type": "Expression"
-						}
+						"fileName": "baseball.csv"
 					}
 				},
 				"linkedServiceName": {
@@ -29,12 +26,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"begindate": {
-				"type": "string",
-				"defaultValue": "YYYY-MM-DD"
-			}
-		},
 		"annotations": [],
 		"lastPublishTime": "2021-06-12T10:49:45Z"
 	},
