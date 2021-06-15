@@ -1,0 +1,20 @@
+{
+	"name": "baseballParquetSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "baseball_final",
+				"fileSystem": "deliverect"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

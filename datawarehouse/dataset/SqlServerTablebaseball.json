@@ -1,0 +1,16 @@
+{
+	"name": "SqlServerTablebaseball",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerRoshan",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "baseball"
+		}
+	}
+}
