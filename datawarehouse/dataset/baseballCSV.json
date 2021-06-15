@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "part-00000-tid-3361198399698041839-37c74c65-904b-4822-a765-304395d219be-12-1-c000.csv",
+				"fileName": "part*.csv",
 				"folderPath": "baseball_final",
 				"fileSystem": "deliverect"
 			},

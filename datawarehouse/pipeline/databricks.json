@@ -50,6 +50,8 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
+							"wildcardFolderPath": "baseball_final",
+							"wildcardFileName": "part*.csv",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
