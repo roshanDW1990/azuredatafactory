@@ -21,8 +21,12 @@
 					"name": "OutputMSHK"
 				}
 			],
-			"transformations": [],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'parquet',\n\twildcardPaths:['DW_MS_files/MS_final/part*.parquet']) ~> readMSfile\nreadMSfile sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tumask: 0022,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\theader: (mystershopperCSVHK),\n\tpartitionBy('hash', 1)) ~> OutputMSHK"
+			"transformations": [
+				{
+					"name": "AlterRow1"
+				}
+			],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'parquet',\n\twildcardPaths:['DW_MS_files/MS_final/part*.parquet']) ~> readMSfile\nreadMSfile alterRow(upsertIf(true())) ~> AlterRow1\nAlterRow1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tumask: 0022,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\tpartitionBy('hash', 1)) ~> OutputMSHK"
 		}
 	}
 }

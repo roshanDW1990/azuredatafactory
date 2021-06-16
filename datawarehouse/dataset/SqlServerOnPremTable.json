@@ -1,0 +1,16 @@
+{
+	"name": "SqlServerOnPremTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerRoshan",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "mystery_shopper_scores"
+		}
+	}
+}
