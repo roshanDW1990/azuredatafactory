@@ -1,0 +1,23 @@
+{
+	"name": "DW_MS_DW_Sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "DW_MS_files/DW_MS_CSV",
+				"fileSystem": "weather"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

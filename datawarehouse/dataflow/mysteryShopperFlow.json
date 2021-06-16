@@ -1,0 +1,28 @@
+{
+	"name": "mysteryShopperFlow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "DW_MS_Parquet_Source",
+						"type": "DatasetReference"
+					},
+					"name": "readMSfile"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "DW_MS_DW_Sink",
+						"type": "DatasetReference"
+					},
+					"name": "OutputMSHK"
+				}
+			],
+			"transformations": [],
+			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false,\n\tformat: 'parquet',\n\twildcardPaths:['DW_MS_files/MS_final/part*.parquet']) ~> readMSfile\nreadMSfile sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tumask: 0022,\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true,\n\theader: (mystershopperCSVHK),\n\tpartitionBy('hash', 1)) ~> OutputMSHK"
+		}
+	}
+}

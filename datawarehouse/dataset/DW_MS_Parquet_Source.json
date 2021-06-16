@@ -1,0 +1,20 @@
+{
+	"name": "DW_MS_Parquet_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "DW_MS_files/MS_final",
+				"fileSystem": "weather"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
