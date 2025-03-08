@@ -1,0 +1,9 @@
+{
+	"name": "rp-nz-sandbox-adventureworks-adf",
+	"location": "australiasoutheast",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "6c1b1d25-a45c-4af7-bc4b-724c04e59467",
+		"tenantId": "122c65ce-e20d-4265-a101-3f14b57a61ab"
+	}
+}

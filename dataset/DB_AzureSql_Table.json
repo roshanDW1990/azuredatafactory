@@ -1,0 +1,25 @@
+{
+	"name": "DB_AzureSql_Table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "AdventureWorks/Database"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "HumanResources",
+			"table": "ods_Employee"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
